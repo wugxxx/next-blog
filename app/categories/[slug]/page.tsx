@@ -1,33 +1,7 @@
 import { notFound } from "next/navigation";
 import { categories } from "@/lib/categories";
 import { BlogCard } from "@/components/blog-card";
-
-// 模拟分类文章数据
-const categoryPosts = {
-  javascript: [
-    {
-      title: "JavaScript 异步编程指南",
-      description: "深入理解 Promise、async/await 和异步编程模式",
-      date: "2024-03-15",
-      slug: "javascript-async-guide",
-      readingTime: "10 分钟",
-      views: 1234
-    },
-    // ... 更多文章
-  ],
-  react: [
-    {
-      title: "React Hooks 最佳实践",
-      description: "学习 React Hooks 的常见用法和注意事项",
-      date: "2024-03-10",
-      slug: "react-hooks-best-practices",
-      readingTime: "8 分钟",
-      views: 2345
-    },
-    // ... 更多文章
-  ],
-  // ... 其他分类的文章
-};
+import { getPostsByCategory } from '@/lib/posts'
 
 interface CategoryPageProps {
   params: Promise<{
@@ -36,8 +10,7 @@ interface CategoryPageProps {
 }
 
 async function getCategoryPosts(slug: string) {
-  // 在实际应用中，这里会是一个数据库查询
-  return categoryPosts[slug as keyof typeof categoryPosts] || [];
+  return getPostsByCategory(slug);
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {

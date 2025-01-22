@@ -1,16 +1,8 @@
 import Link from "next/link";
 import { Clock, Eye } from "lucide-react";
+import { Post } from "@/lib/posts";
 
-interface BlogPostProps {
-  title: string;
-  description: string;
-  date: string;
-  slug: string;
-  readingTime: string;
-  views: number;
-}
-
-export function BlogCard({ title, description, date, slug, readingTime, views }: BlogPostProps) {
+export function BlogCard({ title, excerpt, date, slug, readingTime, views }: Post) {
   return (
     <Link href={`/blog/${slug}`}>
       <article className="group space-y-4 py-10 first:pt-0 border-b last:border-0">
@@ -20,7 +12,7 @@ export function BlogCard({ title, description, date, slug, readingTime, views }:
           </span>
         </h2>
         <p className="text-gray-600 dark:text-gray-400 line-clamp-2">
-          {description}
+          {excerpt}
         </p>
         <div className="text-sm text-gray-500 flex items-center gap-4">
           <span>{date}</span>
