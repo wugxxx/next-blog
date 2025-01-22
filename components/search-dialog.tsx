@@ -31,7 +31,10 @@ export function SearchDialog({ open, onOpenChange }: SearchDialogProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[525px] gap-0 p-0 outline-none">
+      <DialogContent 
+        className="sm:max-w-[525px] gap-0 p-0 outline-none fixed top-24"
+        style={{ transform: 'translate(-50%, 0)' }}
+      >
         <DialogHeader className="sr-only">
           <DialogTitle>搜索文章</DialogTitle>
         </DialogHeader>
