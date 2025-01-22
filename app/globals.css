@@ -70,3 +70,28 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+html {
+  overflow-y: scroll;
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;  /* 滚动条宽度 */
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  background: transparent;  /* 或者使用 #f1f1f1 这样的浅色 */
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);  /* 半透明灰色 */
+  border-radius: 4px;  /* 圆角 */
+}
+
+/* 鼠标悬停时的滑块样式 */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}

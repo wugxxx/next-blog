@@ -6,7 +6,6 @@ export default function Home() {
   
   return (
     <div className="py-8">
-      {/* <h1 className="text-3xl font-bold mb-8">Latest Articles</h1> */}
       <div className="divide-gray-200 dark:divide-gray-800">
         {posts.map(post => (
           <BlogCard
