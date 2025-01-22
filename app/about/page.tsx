@@ -1,12 +1,11 @@
 import { projects } from "@/lib/projects";
-import { cn } from "@/lib/utils";
 
 export default function AboutPage() {
   return (
     <div className="container py-10">
       <div className="max-w-4xl">
         <h1 className="text-4xl font-bold mb-10">
-          Hi there! I'm Archer.
+          Hi there! I&apos;m Archer.
         </h1>
 
         <div className="space-y-8 text-lg mb-16">
@@ -15,11 +14,11 @@ export default function AboutPage() {
           </p>
 
           <p>
-          I graduated in 2019 and came to Shanghai to work as a single software development engineer at Wonders. The main technology stack includes Java/Python/Docker/LLM, etc.
+            I graduated in 2019 and came to Shanghai to work as a single software development engineer at Wonders. The main technology stack includes Java/Python/Docker/LLM, etc.
           </p>
 
           <p>
-          Recently, I found Next.js interesting, so I wrote this blog platform using this technology. Here are some of the projects I've written with Next.js
+            Recently, I found Next.js interesting, so I wrote this blog platform using this technology. Here are some of the projects I&apos;ve written with Next.js
           </p>
         </div>
 

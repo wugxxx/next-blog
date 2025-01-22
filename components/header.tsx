@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <div className="h-16 flex items-center justify-between">
       <Link href="/" className="text-xl font-bold">
-        Archer's
+        Archer&apos;s
       </Link>
       
       <nav className="flex items-center space-x-6">
